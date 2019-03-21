@@ -1,6 +1,7 @@
 package com.springboot.mybatis.service.impl;
 
 import com.springboot.mybatis.entity.Course;
+import com.springboot.mybatis.entity.CourseVO;
 import com.springboot.mybatis.mapper.CourseMapper;
 import com.springboot.mybatis.service.CourseService;
 import org.springframework.stereotype.Service;
@@ -16,9 +17,14 @@ public class CourseServiceImpl implements CourseService {
 
 
     @Override
-    public List<Course> selectAll() {
+    public List<CourseVO> selectAll() {
 
         return courseMapper.selectAll();
+    }
+
+    @Override
+    public List<CourseVO> selectAll1() {
+        return courseMapper.selectAll1();
     }
 
     @Override

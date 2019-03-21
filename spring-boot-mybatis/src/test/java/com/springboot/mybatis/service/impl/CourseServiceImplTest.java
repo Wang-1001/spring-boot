@@ -1,6 +1,7 @@
 package com.springboot.mybatis.service.impl;
 
 import com.springboot.mybatis.entity.Course;
+import com.springboot.mybatis.entity.CourseVO;
 import com.springboot.mybatis.service.CourseService;
 import com.springboot.mybatis.util.RandomUtil;
 import org.junit.Test;
@@ -21,7 +22,7 @@ public class CourseServiceImplTest {
 
     @Test
     public void selectAll() {
-        List<Course> courseList=courseService.selectAll();
+        List<CourseVO> courseList=courseService.selectAll();
         courseList.forEach(course -> System.out.println(course));
     }
     @Test
